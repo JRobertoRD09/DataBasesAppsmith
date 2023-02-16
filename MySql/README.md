@@ -2,9 +2,11 @@
 
 1. Docker
 2. docker-compose.
+3. Python
 
-# How to use
+# Usage
 
+## Create the container
 1. Clone this repository and navigate to the directory with the docker-compose.yml file.
 2. Run the following command to start the container:
 
@@ -13,7 +15,29 @@
 ```
 3. Once the containers are running, you can view the example database using a database manager like DBeaver.
 
-# View in a Database Manager.
+
+## Inserting data into the table.
+
+1. Navigate to the scripts directory.
+1. Create a virtual environment with the following command:
+ ```bash
+python3 -m venv .venv
+```
+2. Activate the virtual environment.
+ ```bash
+source .venv/bin/activate
+```
+3. Install dependencies.
+ ```bash
+pip install mysql-connector-python
+
+pip install Faker
+```
+4. Execute the Python script.
+ ```bash
+python3 insert.py 
+```
+# Viewing the data in a database manager
 For this example we use dbeaver
 
 1. Open DBeaver and create a new MySQL connection.
@@ -26,11 +50,11 @@ For this example we use dbeaver
 
 3. Open the "Driver properties" tab and find the `allowPublicKeyRetrieval` property. Set it to `true`.
 4. Test the connection to make sure it works.
-5. Once the connection is established, you can view the `example_table` and `example_sp` objects in the database.
+5. Once the connection is established, you can view the 'users' table in the database, along with the data.
 
 # About the Example Database
 
-The `example_db` database contains a single table called `example_table`, and a stored procedure called `example_sp`. These objects are meant to demonstrate how to use Docker and Docker Compose to set up a simple MySQL database for testing or development purposes.
+The 'test' database contains a single table called 'users'. This table is intended to demonstrate how to use Docker and Docker Compose to set up a MySQL database and insert dummy data into the table for testing or development purposes.
 
 # Troubleshooting
 
