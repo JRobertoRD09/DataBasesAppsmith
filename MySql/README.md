@@ -29,9 +29,7 @@ source .venv/bin/activate
 ```
 3. Install dependencies.
  ```bash
-pip install mysql-connector-python
-
-pip install Faker
+pip install -r requirements.txt
 ```
 4. Execute the Python script.
  ```bash

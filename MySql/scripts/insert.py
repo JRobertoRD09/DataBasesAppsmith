@@ -1,14 +1,14 @@
 from faker import Faker
 import mysql.connector
 
-# Crea una instancia de Faker
+# Create an instance of Faker
 fake = Faker()
 
-# Conecta con la base de datos
+# Connect with the database
 cnx = mysql.connector.connect(user='user', password='password', host='localhost', database='test')
 cursor = cnx.cursor()
 
-# Genera y ejecuta una declaración INSERT INTO para cada registro
+# Generates and executes an INSERT INTO statement for each record
 for i in range(1000):
     username = fake.user_name()
     email = fake.email()
@@ -24,7 +24,9 @@ for i in range(1000):
     
     cursor.execute(query, values)
 
-# Hace commit de los cambios y cierra la conexión
+# Commits the changes and closes the connection
 cnx.commit()
 cursor.close()
 cnx.close()
+
+print("The data insertion was successful!!")
