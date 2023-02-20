@@ -2,7 +2,6 @@
 
 1. Docker
 2. docker-compose.
-3. Python
 
 # Usage
 
@@ -16,25 +15,6 @@
 3. Once the containers are running, you can view the example database using a database manager like DBeaver.
 
 
-## Inserting data into the table.
-
-1. Navigate to the scripts directory.
-1. Create a virtual environment with the following command:
- ```bash
-python3 -m venv .venv
-```
-2. Activate the virtual environment.
- ```bash
-source .venv/bin/activate
-```
-3. Install dependencies.
- ```bash
-pip install -r requirements.txt
-```
-4. Execute the Python script.
- ```bash
-python3 insert.py 
-```
 # Viewing the data in a database manager
 For this example we use dbeaver
 
